@@ -4,8 +4,8 @@ from main import app
 from main.inline import button2
 from pyrogram.types import Message
 from config import STATUS_ID, INDEX_ID, UPLOADS_ID, SCHEDULE_ID, UPLOADS_USERNAME
-
-schedule = app.get_messages(INDEX_ID,SCHEDULE_ID)
+KAYO_ID = -1001159872623
+schedule = app.get_messages(KAYO_ID,SCHEDULE_ID)
 schedule: Message
 
 def change_tz(gmt):
