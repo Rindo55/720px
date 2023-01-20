@@ -19,7 +19,7 @@ def parse():
     data = []    
 
     for i in b:
-        item = {}
+        item = item[0:3]
         item['title'] = trim_title(i['title'])
         item['size'] = i['subsplease_size']
         item['link'] = i['link']
