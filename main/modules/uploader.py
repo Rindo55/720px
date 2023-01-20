@@ -83,6 +83,8 @@ async def upload_video(msg: Message,file,id,tit,name,ttl):
             caption=gcaption,
 
             file_name=filed,
+               
+            thumb=thumbnail,
 
             force_document=True,
 
