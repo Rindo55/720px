@@ -10,6 +10,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 from main.modules.uploader import upload_video
 
+from main.modules.thumbnail import generate_thumbnail
+
 import os
 
 from main.modules.db import del_anime, get_channel, save_channel, save_uploads, is_voted, save_vote
@@ -135,6 +137,7 @@ async def start_uploading(data):
         ghostname = ghostname.replace("(720p)", "")
         
         guessname = f"**{ghostname}**" + "\n" + "✓  `720p x264 Web-DL`" + "\n" + "✓  `English Sub`" + "\n" + f"__({tit})__" + "\n"+ "#Source #WebDL"
+        thumbnail = await generate_thumbnail(id,file,tit,ep_num,size,format_time(duration))
         videox = await app.send_document(
 
                 KAYO_ID,
@@ -144,6 +147,8 @@ async def start_uploading(data):
             caption=guessname,
 
             file_name=filed,
+
+            thumb=thumbnail,
 
             force_document=True
 
