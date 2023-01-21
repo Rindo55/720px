@@ -135,7 +135,7 @@ async def start_uploading(data):
         ghostname = ghostname.replace("(720p)", "")
         
         guessname = f"**{ghostname}**" + "\n" + "✓  `720p x264 Web-DL`" + "\n" + "✓  `English Sub`" + "\n" + f"__({tit})__" + "\n"+ "#Source #WebDL"
-        await @app.on_message(filters.regex("480p"))
+        await app.on_message(filters.regex("480p"))
         videox = await app.send_document(
 
                 KAYO_ID,
