@@ -97,7 +97,7 @@ async def start_uploading(data):
     try:
 
         title = data["title"]
-
+        title = title.replace("Shinka", "Shin Shinka")
         link = data["link"]
 
         size = data["size"]
