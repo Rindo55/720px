@@ -11,12 +11,14 @@ def trim_title(title: str):
     title, ext = title.replace("[SubsPlease]","").strip().split("[",maxsplit=2)
     _, ext = ext.split("]",maxsplit=2)
     title = title.strip() + ext
+    title = title.replace("Ijiranaide, Nagatoro-san S2", "Ijiranaide, Nagatoro-san 2")
+    title = title.replace("Shinka", "Shin Shinka")
     return title
 
 def parse():
     a = feedparser.parse("https://subsplease.org/rss/?r=720")
     b = a["entries"]
-    b = b[0:1]
+    b = b[0:2]
     data = []    
 
     for i in b:
