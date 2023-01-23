@@ -72,8 +72,8 @@ async def upload_video(msg: Message,file,id,tit,name,ttl):
             filed = filed.replace("(720p)", "[720p x264]")
             caption = f"{name}"
             caption = caption.replace("(720p)", "")
-            gcaption=f"**{caption}**" + "\n" + "✓  `720p x264`" + "\n" + "✓  `English Sub`" + "\n" + f"__({tit})__" + "\n" + "#Encoded #x264"
-            kayo_id = -1001821602858
+            gcaption=f"**{caption}**" + "\n" + "✓  `720p x264 10Bit`" + "\n" + "✓  `English Sub`" + "\n" + f"__({tit})__" + "\n" + "#Encoded #x264"
+            kayo_id = -1001159872623
             x = await app.send_document(
 
                 kayo_id,
