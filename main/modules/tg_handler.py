@@ -54,7 +54,7 @@ async def tg_handler():
 
                 await status.edit(await status_text("Sleeping For 5 Minutes..."),reply_markup=button1)
 
-                await asyncio.sleep(3)
+                await asyncio.sleep(30)
 
             else:                
 
@@ -68,7 +68,7 @@ async def tg_handler():
 
                         pass
 
-                await asyncio.sleep(6)
+                await asyncio.sleep(60)
 
                 
 
